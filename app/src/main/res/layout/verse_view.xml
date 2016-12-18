@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:scrollbars="horizontal|vertical"
+              android:background="@color/spring_green">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/verse_name_verse_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/verse_text_verse_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:gravity="left"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/black"/>
+
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/verse_author_verse_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:gravity="right"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/verse_date_verse_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:gravity="right"
+            android:textStyle="bold"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+</ScrollView>

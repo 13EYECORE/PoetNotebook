@@ -1,0 +1,11 @@
+<resources>
+    <!-- Base application theme -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    </style>
+
+    <style name="Dialog_No_Border" parent="@android:style/Theme.Dialog">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowBackground">@color/transparent_color</item>
+    </style>
+
+</resources>

@@ -1,0 +1,34 @@
+<resources>
+    <!--Application-->
+    <string name="app_name">Блокнот поэта</string>
+    <!--Main menu activity-->
+    <string name="button_new_verse">Новый стих</string>
+    <string name="button_my_verses">Мои стихи</string>
+    <string name="button_favourites">Избранное</string>
+    <string name="button_published">Опубликованные</string>
+    <string name="button_exit">Выйти</string>
+    <string name="textview_enter_author">Автор:</string>
+    <string name="author_dialog_hint">Ф.И. или псевдоним</string>
+    <string name="button_author_save">Сохранить</string>
+    <string name="button_author_cancel">Отмена</string>
+    <string name="textview_author">Автор:</string>
+    <!--New verse activity-->
+    <string name="textview_verse_name">Название</string>
+    <string name="textview_verse_text">Текст</string>
+    <string name="edittext_enter_name">Введите название</string>
+    <string name="edittext_enter_text">Введите текст</string>
+    <string name="button_save">Сохранить</string>
+
+    <!--Dialog of actions with verse-->
+    <string name="choose_action">Выберите действие</string>
+    <string name="action_open">Открыть</string>
+    <string name="action_edit">Редактировать</string>
+    <string name="action_delete">Удалить</string>
+
+    <string-array name="actions_array">
+        <item>Открыть</item>
+        <item>Редактировать</item>
+        <item>Удалить</item>
+    </string-array>
+
+</resources>
