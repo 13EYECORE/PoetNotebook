@@ -4,5 +4,6 @@
           android:layout_width="match_parent"
           android:layout_height="match_parent"
           android:background="@color/bright_green"
-          android:dividerHeight="2dp">
+          android:divider="@color/transparent_color"
+          android:dividerHeight="1dp">
 </ListView>

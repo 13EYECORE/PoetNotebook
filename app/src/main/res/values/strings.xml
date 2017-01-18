@@ -1,33 +1,44 @@
 <resources>
     <!--Application-->
     <string name="app_name">Блокнот поэта</string>
+    <!--Entry activity-->
+    <string name="textview_introduce_yourself">Представьтесь!</string>
+    <string name="textview_author_name">Имя</string>
+    <string name="textview_author_surname">Фамилия</string>
+    <string name="button_continue">Продолжить</string>
     <!--Main menu activity-->
     <string name="button_new_verse">Новый стих</string>
     <string name="button_my_verses">Мои стихи</string>
-    <string name="button_favourites">Избранное</string>
+    <string name="button_favourites">Избранные</string>
     <string name="button_published">Опубликованные</string>
+    <string name="button_settings">Настройки</string>
     <string name="button_exit">Выйти</string>
-    <string name="textview_enter_author">Автор:</string>
-    <string name="author_dialog_hint">Ф.И. или псевдоним</string>
-    <string name="button_author_save">Сохранить</string>
-    <string name="button_author_cancel">Отмена</string>
+    <string name="textview_author_edit"><u>Изменить</u></string>
+    <string name="author_dialog_hint">Неизвестен</string>
     <string name="textview_author">Автор:</string>
-    <!--New verse activity-->
+    <!--Edit verse activity-->
     <string name="textview_verse_name">Название</string>
     <string name="textview_verse_text">Текст</string>
     <string name="edittext_enter_name">Введите название</string>
     <string name="edittext_enter_text">Введите текст</string>
     <string name="button_save">Сохранить</string>
-
-    <!--Dialog of actions with verse-->
-    <string name="choose_action">Выберите действие</string>
-    <string name="action_open">Открыть</string>
-    <string name="action_edit">Редактировать</string>
-    <string name="action_delete">Удалить</string>
-
+    <!--Verse view activity-->
+    <string name="textview_verse_view_name">Название</string>
+    <string name="textview_verse_view_text">Текст</string>
+    <string name="textview_verse_view_author">Автор</string>
+    <string name="textview_verse_view_date">Дата</string>
+    <!--Settings activity-->
+    <string name="button_save_settings">Сохранить</string>
+    <string name="button_default_Settings">Стандартные</string>
+    <string name="textview_text_size">Размер текста</string>
+    <string name="textview_text_color">Цвет текста</string>
+    <string name="textview_background1_color">Цвет фона 1</string>
+    <string name="textview_background2_color">Цвет фона 2</string>
+    <!--Dialog of actions with my verse-->
     <string-array name="actions_array">
         <item>Открыть</item>
         <item>Редактировать</item>
+        <item>Скопировать текст</item>
         <item>Удалить</item>
     </string-array>
 

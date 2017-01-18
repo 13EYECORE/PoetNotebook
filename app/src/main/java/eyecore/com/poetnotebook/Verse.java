@@ -68,5 +68,4 @@ public class Verse
     public void setVerseID(int verseID) {
         this.verseID = verseID;
     }
-
 }

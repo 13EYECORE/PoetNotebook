@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns:android="http://schemas.android.com/apk/res/android"
+          android:id="@+id/listview_myverses"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:background="@color/bright_green"
+          android:divider="@color/transparent_color"
+          android:dividerHeight="1dp">
+</ListView><!-- From: file:/D:/dev/Android/PoetNotebook/app/src/main/res/layout/myverses_list.xml -->

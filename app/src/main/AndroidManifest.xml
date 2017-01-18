@@ -15,8 +15,8 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
+
         <activity
             android:name=".activity.EditVerseActivity">
         </activity>
@@ -27,6 +27,10 @@
 
         <activity
             android:name=".activity.VerseViewActivity">
+        </activity>
+
+        <activity
+            android:name=".activity.SettingsActivity">
         </activity>
 
     </application>

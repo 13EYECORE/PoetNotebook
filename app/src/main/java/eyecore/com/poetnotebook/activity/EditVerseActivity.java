@@ -2,6 +2,7 @@ package eyecore.com.poetnotebook.activity;
 
 
 import android.content.Intent;
+import android.graphics.PorterDuff;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -9,15 +10,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import eyecore.com.poetnotebook.MyFont;
+import eyecore.com.poetnotebook.string.IntentString;
+import eyecore.com.poetnotebook.app.AppSettings;
 import eyecore.com.poetnotebook.database.MyVersesDataBaseHelper;
 import eyecore.com.poetnotebook.R;
 import eyecore.com.poetnotebook.Verse;
 
 
-public class EditVerseActivity extends AppCompatActivity
+public class EditVerseActivity extends AppCompatActivity implements ISettingsChangeable
 {
     boolean isNewVerse;
     int verseID;
@@ -25,9 +29,13 @@ public class EditVerseActivity extends AppCompatActivity
     String verseName;
     Verse verse;
 
+    RelativeLayout layout;
+
     Button button_save;
+
     EditText edittext_enterName;
     EditText edittext_enterText;
+
     TextView textview_verseName;
     TextView textview_verseText;
 
@@ -37,18 +45,23 @@ public class EditVerseActivity extends AppCompatActivity
     protected void onCreate(@Nullable Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+
+
         setContentView(R.layout.edit_verse);
 
         Intent intent = getIntent();
-        isNewVerse = intent.getBooleanExtra("IS_NEW_VERSE", false);
-        verseID = intent.getIntExtra("VERSE_ID", -1);
-        verseAuthor = intent.getStringExtra("VERSE_AUTHOR");
+
+        isNewVerse = intent.getBooleanExtra(IntentString.IS_NEW_VERSE, false);
+        verseID = intent.getIntExtra(IntentString.VERSE_ID, -1);
+        verseAuthor = intent.getStringExtra(IntentString.VERSE_AUTHOR);
 
         dbHelper = new MyVersesDataBaseHelper(this);
 
-        Typeface typeface = MyFont.setAppFont(this);
+        Typeface typeface = AppSettings.getSettings(getApplicationContext()).setDefaultFont();
 
-        edittext_enterName = (EditText) findViewById(R.id.edittext_enter_name);
+        layout = (RelativeLayout)findViewById(R.id.layout_editverse);
+
+        edittext_enterName = (EditText) findViewById(R.id.edittext_enter_verse_name);
         edittext_enterName.setTypeface(typeface);
 
         edittext_enterText = (EditText) findViewById(R.id.edittext_enter_text);
@@ -62,6 +75,7 @@ public class EditVerseActivity extends AppCompatActivity
 
         button_save = (Button) findViewById(R.id.button_save);
         button_save.setTypeface(typeface);
+
 
         if (!isNewVerse)
         {
@@ -104,8 +118,13 @@ public class EditVerseActivity extends AppCompatActivity
                     Intent intent = new Intent(EditVerseActivity.this, MyVersesActivity.class);
                     startActivity(intent);
                 }
+
+                Toast.makeText(getApplicationContext(), "Стих сохранён", Toast.LENGTH_SHORT).show();
             }
         });
+
+        AppSettings.getSettings(getApplicationContext()).loadSettings();
+        setSettings();
     }
 
     @Override
@@ -113,7 +132,8 @@ public class EditVerseActivity extends AppCompatActivity
     {
         if (isNewVerse)
         {
-            verse = new Verse(edittext_enterName.getText().toString() + "(Черновик)", verseAuthor, edittext_enterText.getText().toString());
+            verse = new Verse(edittext_enterName.getText().toString() + "(Черновик)", verseAuthor,
+                    edittext_enterText.getText().toString());
             dbHelper.AddVerse(verse);
             super.onBackPressed();
         }
@@ -126,6 +146,35 @@ public class EditVerseActivity extends AppCompatActivity
             Intent intent = new Intent(EditVerseActivity.this, MyVersesActivity.class);
             startActivity(intent);
         }
+    }
+
+    @Override
+    public void setSettings()
+    {
+        layout.setBackgroundColor(AppSettings.getSettings(getApplicationContext()).getBackground1Color());
+
+        button_save.getBackground().setColorFilter(AppSettings.getSettings(getApplicationContext()).getBackground2Color(),
+                PorterDuff.Mode.SRC_IN);
+        button_save.setTextColor(AppSettings.getSettings(getApplicationContext()).getTextColor());
+        button_save.setTextSize(AppSettings.getSettings(getApplicationContext()).getTextSize());
+
+        textview_verseName.setTextColor(AppSettings.getSettings(getApplicationContext()).getTextColor());
+        textview_verseName.setTextSize(AppSettings.getSettings(getApplicationContext()).getTextSize());
+
+        edittext_enterName.setTextColor(AppSettings.getSettings(getApplicationContext()).getTextColor());
+        edittext_enterName.setTextSize(AppSettings.getSettings(getApplicationContext()).getTextSize());
+        edittext_enterName.setHintTextColor(AppSettings.getSettings(getApplicationContext()).getTextColor());
+        edittext_enterName.getBackground().setColorFilter(AppSettings.getSettings(getApplicationContext()).getBackground1Color(),
+                PorterDuff.Mode.SRC_IN);
+
+        textview_verseText.setTextColor(AppSettings.getSettings(getApplicationContext()).getTextColor());
+        textview_verseText.setTextSize(AppSettings.getSettings(getApplicationContext()).getTextSize());
+
+        edittext_enterText.setTextColor(AppSettings.getSettings(getApplicationContext()).getTextColor());
+        edittext_enterText.setTextSize(AppSettings.getSettings(getApplicationContext()).getTextSize());
+        edittext_enterText.setHintTextColor(AppSettings.getSettings(getApplicationContext()).getTextColor());
+        edittext_enterText.getBackground().setColorFilter(AppSettings.getSettings(getApplicationContext()).getBackground1Color(),
+                PorterDuff.Mode.SRC_IN);
     }
 }
 
