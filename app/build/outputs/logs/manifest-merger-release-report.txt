@@ -54,11 +54,16 @@ activity#eyecore.com.poetnotebook.activity.VerseViewActivity
 ADDED from AndroidManifest.xml:28:9
 	android:name
 		ADDED from AndroidManifest.xml:29:13
+activity#eyecore.com.poetnotebook.activity.SettingsActivity
+ADDED from AndroidManifest.xml:32:9
+	android:name
+		ADDED from AndroidManifest.xml:33:13
 uses-sdk
 INJECTED from AndroidManifest.xml:0:0 reason: use-sdk injection requested
 MERGED from com.android.support:support-v4:23.0.0:20:5
 MERGED from com.android.support:appcompat-v7:23.0.0:20:5
 MERGED from com.android.support:support-v4:23.0.0:20:5
+MERGED from com.github.yukuku:ambilwarna:2.0.1:8:5
 	android:targetSdkVersion
 		INJECTED from AndroidManifest.xml:0:0
 		INJECTED from AndroidManifest.xml:0:0

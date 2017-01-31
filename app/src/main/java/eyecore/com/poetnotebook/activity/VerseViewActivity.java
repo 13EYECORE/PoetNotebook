@@ -63,14 +63,14 @@ public class VerseViewActivity extends AppCompatActivity implements ISettingsCha
         {
             verse = dbHelper.getVerse(verseID);
             textview_verseName.setText(verse.getVerseName());
-            textview_verseAuthor.setText(verse.getVerseAuthor());
+            textview_verseAuthor.setText(" "+verse.getVerseAuthor());
             textview_verseText.setText(verse.getVerseText());
             LocalDate date = dtf.parseLocalDate(verse.getVerseDate().toString());
-            textview_verseDate.setText(dtfOut.print(date));
+            textview_verseDate.setText(dtfOut.print(date)+" ");
         }
         else
         {
-            Toast.makeText(getApplicationContext(), "Произошла ошибка", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), R.string.error, Toast.LENGTH_SHORT).show();
         }
 
         setSettings();

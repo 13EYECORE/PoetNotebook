@@ -52,7 +52,7 @@ public class MyVersesActivity extends AppCompatActivity implements ISettingsChan
 
         if (myVerses.isEmpty())
         {
-            Toast.makeText(getApplicationContext(), "Список пуст", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), R.string.empty_list, Toast.LENGTH_SHORT).show();
         }
 
         myActions = Arrays.asList(getResources().getStringArray(R.array.actions_array));
@@ -90,12 +90,12 @@ public class MyVersesActivity extends AppCompatActivity implements ISettingsChan
                         ClipboardManager cb = (ClipboardManager) getApplicationContext().getSystemService(CLIPBOARD_SERVICE);
                         ClipData clip = ClipData.newPlainText("", myVerses.get(verse_pos).getVerseText());
                         cb.setPrimaryClip(clip);
-                        Toast.makeText(getApplicationContext(), "Текст скопирован", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), R.string.copied_text, Toast.LENGTH_SHORT).show();
                         break;
                     case 3:
                         dbHelper.deleteVerse(myVerses.get(verse_pos));
                         myAdapter.remove(myVerses.get(verse_pos));
-                        Toast.makeText(getApplicationContext(), "Стих удалён", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), R.string.deleted_verse, Toast.LENGTH_SHORT).show();
                         break;
                 }
             }

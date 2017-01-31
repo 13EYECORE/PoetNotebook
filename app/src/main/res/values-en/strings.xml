@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Poet Notebook</string>
+    <string name="author_dialog_hint">\tUnknown</string>
+    <string name="button_continue">Continue</string>
+    <string name="button_default_Settings">Default</string>
+    <string name="button_exit">Exit</string>
+    <string name="button_favourites">Favourites</string>
+    <string name="button_my_verses">My verses</string>
+    <string name="button_new_verse">New verse</string>
+    <string name="button_published">Published</string>
+    <string name="button_save">Save</string>
+    <string name="button_save_settings">Save</string>
+    <string name="button_settings">Settings</string>
+    <string name="edittext_enter_name">Enter verse name</string>
+    <string name="edittext_enter_text">Enter text</string>
+    <string name="textview_author">\tAuthor:</string>
+    <string name="textview_author_edit">\t<u>Change</u></string>
+    <string name="textview_author_name">Name</string>
+    <string name="textview_author_surname">Surname</string>
+    <string name="textview_background1_color">Color 1</string>
+    <string name="textview_background2_color">Color 2</string>
+    <string name="textview_introduce_yourself">Introduce yourself!</string>
+    <string name="textview_text_color">Text color</string>
+    <string name="textview_text_size">Text size</string>
+    <string name="textview_verse_name">Verse name</string>
+    <string name="textview_verse_text">Text</string>
+    <string name="unavailable">Temporarily unavailable</string>
+
+    <string-array name="actions_array">
+        <item>Open</item>
+        <item>Edit</item>
+        <item>Copy text</item>
+        <item>Delete</item>
+    </string-array>
+
+    <string name="author_is_changed">Author is changed</string>
+    <string name="not_filled">Not all fields are filled</string>
+    <string name="rough_draft">(Rough draft)</string>
+    <string name="verse_is_saved">Verse is saved</string>
+    <string name="empty_list">List is empty</string>
+    <string name="copied_text">Text is copied</string>
+    <string name="deleted_verse">Verse is deleted</string>
+    <string name="settings_reset">Settings reset</string>
+    <string name="settings_saved">Settings saved</string>
+    <string name="error">An error has occurred</string>
+</resources>

@@ -247,7 +247,8 @@
     <!-- From: file:/D:/dev/Android/PoetNotebook/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="app_name">Блокнот поэта</string>
-    <string name="author_dialog_hint">Неизвестен</string>
+    <string name="author_dialog_hint">\tНеизвестен</string>
+    <string name="author_is_changed">Автор изменён</string>
     <string name="button_continue">Продолжить</string>
     <string name="button_default_Settings">Стандартные</string>
     <string name="button_exit">Выйти</string>
@@ -258,15 +259,23 @@
     <string name="button_save">Сохранить</string>
     <string name="button_save_settings">Сохранить</string>
     <string name="button_settings">Настройки</string>
+    <string name="copied_text">Текст скопирован</string>
+    <string name="deleted_verse">Стих удалён</string>
     <string name="edittext_enter_name">Введите название</string>
     <string name="edittext_enter_text">Введите текст</string>
+    <string name="empty_list">Список пуст</string>
+    <string name="error">Произошла ошибка</string>
+    <string name="not_filled">Не все поля заполнены</string>
+    <string name="rough_draft">(Черновик)</string>
+    <string name="settings_reset">Настройки сброшены</string>
+    <string name="settings_saved">Настройки сохранены</string>
     <!-- From: file:/D:/dev/Android/PoetNotebook/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values/values.xml -->
     <eat-comment/>
     <string name="status_bar_notification_info_overflow">999+</string>
     <!-- From: file:/D:/dev/Android/PoetNotebook/app/src/main/res/values/strings.xml -->
     <eat-comment/>
-    <string name="textview_author">Автор:</string>
-    <string name="textview_author_edit"><u>Изменить</u></string>
+    <string name="textview_author">\tАвтор:</string>
+    <string name="textview_author_edit">\t<u>Изменить</u></string>
     <string name="textview_author_name">Имя</string>
     <string name="textview_author_surname">Фамилия</string>
     <string name="textview_background1_color">Цвет фона 1</string>
@@ -276,10 +285,12 @@
     <string name="textview_text_size">Размер текста</string>
     <string name="textview_verse_name">Название</string>
     <string name="textview_verse_text">Текст</string>
-    <string name="textview_verse_view_author">Автор</string>
-    <string name="textview_verse_view_date">Дата</string>
-    <string name="textview_verse_view_name">Название</string>
-    <string name="textview_verse_view_text">Текст</string>
+    <string name="textview_verse_view_author" translatable="false">Автор</string>
+    <string name="textview_verse_view_date" translatable="false">Дата</string>
+    <string name="textview_verse_view_name" translatable="false">Название</string>
+    <string name="textview_verse_view_text" translatable="false">Текст</string>
+    <string name="unavailable">Временно недоступно</string>
+    <string name="verse_is_saved">Стих сохранён</string>
     <!-- From: file:/D:/dev/Android/PoetNotebook/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values/values.xml -->
     <eat-comment/>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>

@@ -9,7 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,7 +20,7 @@ import yuku.ambilwarna.AmbilWarnaDialog;
 @SuppressWarnings("deprecation")
 public class SettingsActivity extends AppCompatActivity implements ISettingsChangeable
 {
-    LinearLayout layout;
+    ScrollView layout;
 
     View view_text_color;
     View view_background1_color;
@@ -54,7 +54,7 @@ public class SettingsActivity extends AppCompatActivity implements ISettingsChan
 
         typeface = AppSettings.getSettings(getApplicationContext()).setDefaultFont();
 
-        layout = (LinearLayout) findViewById(R.id.layout_settings);
+        layout = (ScrollView) findViewById(R.id.layout_settings);
 
         view_text_color = findViewById(R.id.color_text_rectangle);
         view_background1_color = findViewById(R.id.color_background1_rectangle);
@@ -124,7 +124,7 @@ public class SettingsActivity extends AppCompatActivity implements ISettingsChan
                 view_text_color.setBackgroundColor(AppSettings.getSettings(getApplicationContext()).getTextColor());
                 view_background1_color.setBackgroundColor(AppSettings.getSettings(getApplicationContext()).getBackground1Color());
                 view_background2_color.setBackgroundColor(AppSettings.getSettings(getApplicationContext()).getBackground2Color());
-                Toast.makeText(getApplicationContext(), "Настройки сброшены", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), R.string.settings_reset, Toast.LENGTH_SHORT).show();
                 setSettings();
             }
         });
@@ -137,7 +137,7 @@ public class SettingsActivity extends AppCompatActivity implements ISettingsChan
                 AppSettings.getSettings(getApplicationContext()).setTextSize(current_text_size);
                 AppSettings.getSettings(getApplicationContext()).saveSettings();
                 setSettings();
-                Toast.makeText(getApplicationContext(), "Настройки сохранены", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), R.string.settings_saved, Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(SettingsActivity.this, SettingsActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivity(intent);
@@ -205,8 +205,8 @@ public class SettingsActivity extends AppCompatActivity implements ISettingsChan
     }
 
     @Override
-    public void setSettings()
-    {
+    public void setSettings() {
+
         view_text_color.setBackgroundColor(AppSettings.getSettings(getApplicationContext()).getTextColor());
 
         view_background1_color.setBackgroundColor(AppSettings.getSettings(getApplicationContext()).getBackground1Color());

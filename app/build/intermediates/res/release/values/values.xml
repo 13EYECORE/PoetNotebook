@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/D:/dev/Android/MyApplication/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/D:/dev/Android/PoetNotebook/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string-array name="actions_array">
         <item>Открыть</item>
         <item>Редактировать</item>
+        <item>Скопировать текст</item>
         <item>Удалить</item>
     </string-array>
-    <!-- From: file:/D:/dev/Android/MyApplication/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values/values.xml -->
+    <!-- From: file:/D:/dev/Android/PoetNotebook/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values/values.xml -->
     <eat-comment/>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
@@ -30,10 +31,10 @@
     <color name="background_floating_material_light">@android:color/white</color>
     <color name="background_material_dark">@color/material_grey_850</color>
     <color name="background_material_light">@color/material_grey_50</color>
-    <!-- From: file:/D:/dev/Android/MyApplication/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/D:/dev/Android/PoetNotebook/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="black">#000000</color>
-    <!-- From: file:/D:/dev/Android/MyApplication/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values/values.xml -->
+    <!-- From: file:/D:/dev/Android/PoetNotebook/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values/values.xml -->
     <eat-comment/>
     <color name="bright_foreground_disabled_material_dark">#80ffffff</color>
     <color name="bright_foreground_disabled_material_light">#80000000</color>
@@ -41,10 +42,10 @@
     <color name="bright_foreground_inverse_material_light">@color/bright_foreground_material_dark</color>
     <color name="bright_foreground_material_dark">@android:color/white</color>
     <color name="bright_foreground_material_light">@android:color/black</color>
-    <!-- From: file:/D:/dev/Android/MyApplication/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/D:/dev/Android/PoetNotebook/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="bright_green">#007D34</color>
-    <!-- From: file:/D:/dev/Android/MyApplication/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values/values.xml -->
+    <!-- From: file:/D:/dev/Android/PoetNotebook/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values/values.xml -->
     <eat-comment/>
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
@@ -84,16 +85,16 @@
     <color name="secondary_text_default_material_light">#8a000000</color>
     <color name="secondary_text_disabled_material_dark">#36ffffff</color>
     <color name="secondary_text_disabled_material_light">#24000000</color>
-    <!-- From: file:/D:/dev/Android/MyApplication/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/D:/dev/Android/PoetNotebook/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="spring_green">#00FF7F</color>
-    <!-- From: file:/D:/dev/Android/MyApplication/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values/values.xml -->
+    <!-- From: file:/D:/dev/Android/PoetNotebook/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values/values.xml -->
     <eat-comment/>
     <color name="switch_thumb_disabled_material_dark">#ff616161</color>
     <color name="switch_thumb_disabled_material_light">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_dark">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_light">#fff1f1f1</color>
-    <!-- From: file:/D:/dev/Android/MyApplication/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/D:/dev/Android/PoetNotebook/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="transparent_color">#00000000</color>
     <color name="white">#FFFFFF</color>
@@ -104,6 +105,7 @@
     <declare-styleable name="ActionMode"><attr name="titleTextStyle"/><attr name="subtitleTextStyle"/><attr name="background"/><attr name="backgroundSplit"/><attr name="height"/><attr format="reference" name="closeItemLayout"/></declare-styleable>
     <declare-styleable name="ActivityChooserView"><attr format="string" name="initialActivityCount"/><attr format="reference" name="expandActivityOverflowButtonDrawable"/></declare-styleable>
     <declare-styleable name="AlertDialog"><attr name="android:layout"/><attr format="reference" name="buttonPanelSideLayout"/><attr format="reference" name="listLayout"/><attr format="reference" name="multiChoiceItemLayout"/><attr format="reference" name="singleChoiceItemLayout"/><attr format="reference" name="listItemLayout"/></declare-styleable>
+    <declare-styleable name="AmbilWarnaPreference"><attr format="boolean" name="supportsAlpha"/></declare-styleable>
     <declare-styleable name="AppCompatTextView"><attr format="reference|boolean" name="textAllCaps"/><attr name="android:textAppearance"/></declare-styleable>
     <declare-styleable name="CompoundButton"><attr name="android:button"/><attr format="color" name="buttonTint"/><attr name="buttonTintMode"><enum name="src_over" value="3"/><enum name="src_in" value="5"/><enum name="src_atop" value="9"/><enum name="multiply" value="14"/><enum name="screen" value="15"/></attr></declare-styleable>
     <declare-styleable name="DrawerArrowToggle"><attr format="color" name="color"/><attr format="boolean" name="spinBars"/><attr format="dimension" name="drawableSize"/><attr format="dimension" name="gapBetweenBars"/><attr format="dimension" name="arrowHeadLength"/><attr format="dimension" name="arrowShaftLength"/><attr format="dimension" name="barLength"/><attr format="dimension" name="thickness"/></declare-styleable>
@@ -124,7 +126,7 @@
     <declare-styleable name="View"><attr format="dimension" name="paddingStart"/><attr format="dimension" name="paddingEnd"/><attr name="android:focusable"/><attr format="reference" name="theme"/><attr name="android:theme"/></declare-styleable>
     <declare-styleable name="ViewBackgroundHelper"><attr name="android:background"/><attr format="color" name="backgroundTint"/><attr name="backgroundTintMode"><enum name="src_over" value="3"/><enum name="src_in" value="5"/><enum name="src_atop" value="9"/><enum name="multiply" value="14"/><enum name="screen" value="15"/></attr></declare-styleable>
     <declare-styleable name="ViewStubCompat"><attr name="android:layout"/><attr name="android:inflatedId"/><attr name="android:id"/></declare-styleable>
-    <!-- From: file:/D:/dev/Android/MyApplication/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values/values.xml -->
+    <!-- From: file:/D:/dev/Android/PoetNotebook/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values/values.xml -->
     <eat-comment/>
     <dimen name="abc_action_bar_content_inset_material">16dp</dimen>
     <dimen name="abc_action_bar_default_height_material">56dp</dimen>
@@ -186,11 +188,17 @@
     <dimen name="abc_text_size_subtitle_material_toolbar">16dp</dimen>
     <dimen name="abc_text_size_title_material">20sp</dimen>
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
-    <!-- From: file:/D:/dev/Android/MyApplication/app/src/main/res/values/dimens.xml -->
+    <!-- From: file:/D:/dev/Android/PoetNotebook/app/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <!-- From: file:/D:/dev/Android/MyApplication/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values/values.xml -->
+    <!-- From: file:/D:/dev/Android/PoetNotebook/app/build/intermediates/exploded-aar/com.github.yukuku/ambilwarna/2.0.1/res/values/values.xml -->
+    <eat-comment/>
+    <dimen name="ambilwarna_hsvHeight">240dp</dimen>
+    <dimen name="ambilwarna_hsvWidth">240dp</dimen>
+    <dimen name="ambilwarna_hueWidth">30dp</dimen>
+    <dimen name="ambilwarna_spacer">8dp</dimen>
+    <!-- From: file:/D:/dev/Android/PoetNotebook/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values/values.xml -->
     <eat-comment/>
     <item name="dialog_fixed_height_major" type="dimen">80%</item>
     <item name="dialog_fixed_height_minor" type="dimen">100%</item>
@@ -236,44 +244,64 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
-    <!-- From: file:/D:/dev/Android/MyApplication/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/D:/dev/Android/PoetNotebook/app/src/main/res/values/strings.xml -->
     <eat-comment/>
-    <string name="action_delete">Удалить</string>
-    <string name="action_edit">Редактировать</string>
-    <string name="action_open">Открыть</string>
     <string name="app_name">Блокнот поэта</string>
-    <string name="author_dialog_hint">Ф.И. или псевдоним</string>
-    <string name="button_author_cancel">Отмена</string>
-    <string name="button_author_save">Сохранить</string>
+    <string name="author_dialog_hint">\tНеизвестен</string>
+    <string name="author_is_changed">Автор изменён</string>
+    <string name="button_continue">Продолжить</string>
+    <string name="button_default_Settings">Стандартные</string>
     <string name="button_exit">Выйти</string>
-    <string name="button_favourites">Избранное</string>
+    <string name="button_favourites">Избранные</string>
     <string name="button_my_verses">Мои стихи</string>
     <string name="button_new_verse">Новый стих</string>
     <string name="button_published">Опубликованные</string>
     <string name="button_save">Сохранить</string>
-    <string name="choose_action">Выберите действие</string>
+    <string name="button_save_settings">Сохранить</string>
+    <string name="button_settings">Настройки</string>
+    <string name="copied_text">Текст скопирован</string>
+    <string name="deleted_verse">Стих удалён</string>
     <string name="edittext_enter_name">Введите название</string>
     <string name="edittext_enter_text">Введите текст</string>
-    <!-- From: file:/D:/dev/Android/MyApplication/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values/values.xml -->
+    <string name="empty_list">Список пуст</string>
+    <string name="error">Произошла ошибка</string>
+    <string name="not_filled">Не все поля заполнены</string>
+    <string name="rough_draft">(Черновик)</string>
+    <string name="settings_reset">Настройки сброшены</string>
+    <string name="settings_saved">Настройки сохранены</string>
+    <!-- From: file:/D:/dev/Android/PoetNotebook/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values/values.xml -->
     <eat-comment/>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <!-- From: file:/D:/dev/Android/MyApplication/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/D:/dev/Android/PoetNotebook/app/src/main/res/values/strings.xml -->
     <eat-comment/>
-    <string name="textview_author">Автор:</string>
-    <string name="textview_enter_author">Автор:</string>
+    <string name="textview_author">\tАвтор:</string>
+    <string name="textview_author_edit">\t<u>Изменить</u></string>
+    <string name="textview_author_name">Имя</string>
+    <string name="textview_author_surname">Фамилия</string>
+    <string name="textview_background1_color">Цвет фона 1</string>
+    <string name="textview_background2_color">Цвет фона 2</string>
+    <string name="textview_introduce_yourself">Представьтесь!</string>
+    <string name="textview_text_color">Цвет текста</string>
+    <string name="textview_text_size">Размер текста</string>
     <string name="textview_verse_name">Название</string>
     <string name="textview_verse_text">Текст</string>
-    <!-- From: file:/D:/dev/Android/MyApplication/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values/values.xml -->
+    <string name="textview_verse_view_author" translatable="false">Автор</string>
+    <string name="textview_verse_view_date" translatable="false">Дата</string>
+    <string name="textview_verse_view_name" translatable="false">Название</string>
+    <string name="textview_verse_view_text" translatable="false">Текст</string>
+    <string name="unavailable">Временно недоступно</string>
+    <string name="verse_is_saved">Стих сохранён</string>
+    <!-- From: file:/D:/dev/Android/PoetNotebook/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values/values.xml -->
     <eat-comment/>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
     <style name="Animation.AppCompat.DropDownUp" parent="Base.Animation.AppCompat.DropDownUp"/>
-    <!-- From: file:/D:/dev/Android/MyApplication/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/D:/dev/Android/PoetNotebook/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
     </style>
-    <!-- From: file:/D:/dev/Android/MyApplication/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values/values.xml -->
+    <!-- From: file:/D:/dev/Android/PoetNotebook/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values/values.xml -->
     <eat-comment/>
     <style name="Base.AlertDialog.AppCompat" parent="android:Widget">
         <item name="android:layout">@layout/abc_alert_dialog_material</item>
@@ -1188,13 +1216,13 @@
         <item name="android:minWidth">56dp</item>
         <item name="android:scaleType">center</item>
     </style>
-    <!-- From: file:/D:/dev/Android/MyApplication/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/D:/dev/Android/PoetNotebook/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="Dialog_No_Border" parent="@android:style/Theme.Dialog">
         <item name="android:windowIsFloating">true</item>
         <item name="android:windowBackground">@color/transparent_color</item>
     </style>
-    <!-- From: file:/D:/dev/Android/MyApplication/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values/values.xml -->
+    <!-- From: file:/D:/dev/Android/PoetNotebook/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values/values.xml -->
     <eat-comment/>
     <style name="Platform.AppCompat" parent="android:Theme">
         <item name="android:windowNoTitle">true</item>

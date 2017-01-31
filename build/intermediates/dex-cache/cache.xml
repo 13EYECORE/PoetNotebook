@@ -6,42 +6,42 @@
         jumboMode="false"
         revision="23.0.0"
         sha1="990e7f98a7bad86a40b1f0bcfeb039023afd0839">
-        <dex dex="D:\dev\Android\PoetNotebook\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.0-04438385022cf9783f86410ac5d299cdbdb70685.jar" />
-    </item>
-    <item
-        jar="D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.0\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="4fcf0b1879f8caf497c073e1432d398e9e2988c1">
-        <dex dex="D:\dev\Android\PoetNotebook\app\build\intermediates\pre-dexed\debug\classes-8adfa878086a6ec7597a4f19bea6e216f84de3b2.jar" />
-    </item>
-    <item
-        jar="D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\libs\internal_impl-23.0.0.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="8bd336eeae661e8311330284897ee07f8ebaa297">
-        <dex dex="D:\dev\Android\PoetNotebook\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.0-97d657bc2667d9aff1e2c7efc7eb3dc381e36641.jar" />
+        <dex dex="D:\dev\Android\PoetNotebook\app\build\intermediates\pre-dexed\release\support-annotations-23.0.0-04438385022cf9783f86410ac5d299cdbdb70685.jar" />
     </item>
     <item
         jar="D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.github.yukuku\ambilwarna\2.0.1\classes.jar"
         jumboMode="false"
         revision="23.0.0"
         sha1="7ed87c7f833e46dacace668e63cb8c4b67cb3172">
-        <dex dex="D:\dev\Android\PoetNotebook\app\build\intermediates\pre-dexed\debug\classes-bbf2a6967670266840d81b87ea0ce42fa69596e8.jar" />
+        <dex dex="D:\dev\Android\PoetNotebook\app\build\intermediates\pre-dexed\release\classes-bbf2a6967670266840d81b87ea0ce42fa69596e8.jar" />
     </item>
     <item
         jar="D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\classes.jar"
         jumboMode="false"
         revision="23.0.0"
         sha1="8413c27b45b7fe61dca4a98159f65e2cee215f5a">
-        <dex dex="D:\dev\Android\PoetNotebook\app\build\intermediates\pre-dexed\debug\classes-def3d0d76e3c5ab73131215e3852bab5e6d2bac1.jar" />
+        <dex dex="D:\dev\Android\PoetNotebook\app\build\intermediates\pre-dexed\release\classes-def3d0d76e3c5ab73131215e3852bab5e6d2bac1.jar" />
+    </item>
+    <item
+        jar="D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.0\classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="4fcf0b1879f8caf497c073e1432d398e9e2988c1">
+        <dex dex="D:\dev\Android\PoetNotebook\app\build\intermediates\pre-dexed\release\classes-8adfa878086a6ec7597a4f19bea6e216f84de3b2.jar" />
+    </item>
+    <item
+        jar="D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\libs\internal_impl-23.0.0.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="8bd336eeae661e8311330284897ee07f8ebaa297">
+        <dex dex="D:\dev\Android\PoetNotebook\app\build\intermediates\pre-dexed\release\internal_impl-23.0.0-97d657bc2667d9aff1e2c7efc7eb3dc381e36641.jar" />
     </item>
     <item
         jar="D:\dev\Android\PoetNotebook\app\libs\joda-time-2.9.5.jar"
         jumboMode="false"
         revision="23.0.0"
         sha1="5f01da7306363fad2028b916f3eab926262de928">
-        <dex dex="D:\dev\Android\PoetNotebook\app\build\intermediates\pre-dexed\debug\joda-time-2.9.5-4fe4c99dc5934ab2aa8bb6810dea93baba4d495a.jar" />
+        <dex dex="D:\dev\Android\PoetNotebook\app\build\intermediates\pre-dexed\release\joda-time-2.9.5-4fe4c99dc5934ab2aa8bb6810dea93baba4d495a.jar" />
     </item>
 
 </items>

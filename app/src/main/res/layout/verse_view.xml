@@ -54,6 +54,7 @@
            android:layout_height="wrap_content">
 
            <TextView
+               android:fontFeatureSettings=""
                android:includeFontPadding="true"
                android:paddingLeft="10dp"
                android:text="@string/textview_verse_view_author"

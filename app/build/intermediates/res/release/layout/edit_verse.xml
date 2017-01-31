@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/layout_editverse"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/spring_green">
+                android:background="@color/bright_green">
 
     <LinearLayout
         android:id="@+id/button_save_layout"
@@ -56,16 +57,17 @@
              </View>
 
             <EditText
-                android:id="@+id/edittext_enter_name"
+                android:id="@+id/edittext_enter_verse_name"
                 android:hint="@string/edittext_enter_name"
                 android:maxLines="1"
                 android:singleLine="true"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textCursorDrawable="@drawable/cursor"
+                android:textSize="24sp"
                 android:textColor="@color/black"
-                android:textColorHint="@color/material_grey_600"
-                android:background="@drawable/edittext_border"/>
+                android:textColorHint="@color/black"
+                android:background="@drawable/edittext_light_border"/>
 
             <TextView
                 android:id="@+id/textview_verse_text"
@@ -89,6 +91,7 @@
                 android:layout_height="wrap_content">
 
                 <EditText
+                    android:textSize="24sp"
                     android:id="@+id/edittext_enter_text"
                     android:hint="@string/edittext_enter_text"
                     android:inputType="textMultiLine"
@@ -97,8 +100,8 @@
                     android:layout_height="wrap_content"
                     android:textCursorDrawable="@drawable/cursor"
                     android:textColor="@color/black"
-                    android:textColorHint="@color/material_grey_600"
-                    android:background="@drawable/edittext_border"/>
+                    android:textColorHint="@color/black"
+                    android:background="@drawable/edittext_light_border"/>
 
             </HorizontalScrollView>
 
@@ -106,4 +109,4 @@
 
     </ScrollView>
 
-</RelativeLayout><!-- From: file:/D:/dev/Android/MyApplication/app/src/main/res/layout/edit_verse.xml -->
+</RelativeLayout><!-- From: file:/D:/dev/Android/PoetNotebook/app/src/main/res/layout/edit_verse.xml -->

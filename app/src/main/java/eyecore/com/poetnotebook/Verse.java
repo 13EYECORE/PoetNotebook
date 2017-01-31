@@ -15,7 +15,7 @@ public class Verse
         verseDate = LocalDate.now();
     }
 
-    public Verse (String name, String author, String text)
+    public Verse(String name, String author, String text)
     {
         verseName = name;
         verseAuthor = author;

@@ -59,8 +59,8 @@ public class MyVersesArrayAdapter extends ArrayAdapter<Verse> implements ISettin
 
         LocalDate date = dtf.parseLocalDate(verse.getVerseDate().toString());
 
-        textview_myverse_name.setText(verse.getVerseName());
-        textview_myverse_date.setText(dtfOut.print(date));
+        textview_myverse_name.setText(" "+verse.getVerseName());
+        textview_myverse_date.setText(dtfOut.print(date)+" ");
 
         setSettings();
 

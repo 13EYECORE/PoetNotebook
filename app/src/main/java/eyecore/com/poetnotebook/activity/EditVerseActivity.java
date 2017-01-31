@@ -96,7 +96,7 @@ public class EditVerseActivity extends AppCompatActivity implements ISettingsCha
                 {
                     if (edittext_enterName.getText().toString().isEmpty())
                     {
-                        verseName = "(Черновик)";
+                        verseName = getString(R.string.rough_draft);
                     }
                     else
                     {
@@ -119,7 +119,7 @@ public class EditVerseActivity extends AppCompatActivity implements ISettingsCha
                     startActivity(intent);
                 }
 
-                Toast.makeText(getApplicationContext(), "Стих сохранён", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), R.string.verse_is_saved, Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -132,7 +132,7 @@ public class EditVerseActivity extends AppCompatActivity implements ISettingsCha
     {
         if (isNewVerse)
         {
-            verse = new Verse(edittext_enterName.getText().toString() + "(Черновик)", verseAuthor,
+            verse = new Verse(edittext_enterName.getText().toString() + getString(R.string.rough_draft), verseAuthor,
                     edittext_enterText.getText().toString());
             dbHelper.AddVerse(verse);
             super.onBackPressed();

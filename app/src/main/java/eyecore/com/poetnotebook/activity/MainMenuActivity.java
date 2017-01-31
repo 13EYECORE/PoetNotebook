@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,7 +24,7 @@ import eyecore.com.poetnotebook.app.AppSettings;
 
 public class MainMenuActivity extends AppCompatActivity implements ISettingsChangeable
 {
-    LinearLayout layout;
+    ScrollView layout;
 
     Button button_newVerse;
     Button button_myVerses;
@@ -52,7 +53,7 @@ public class MainMenuActivity extends AppCompatActivity implements ISettingsChan
 
         typeface = AppSettings.getSettings(getApplicationContext()).setDefaultFont();
 
-        layout = (LinearLayout)findViewById(R.id.layout_mainmenu);
+        layout = (ScrollView)findViewById(R.id.layout_mainmenu);
 
         textview_author = (TextView)findViewById(R.id.textview_author);
         textview_author_name = (TextView)findViewById(R.id.textview_author_name);
@@ -104,7 +105,7 @@ public class MainMenuActivity extends AppCompatActivity implements ISettingsChan
             @Override
             public void onClick(View view)
             {
-                Toast.makeText(getApplicationContext(), "Временно недоступно", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), R.string.unavailable, Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -116,7 +117,7 @@ public class MainMenuActivity extends AppCompatActivity implements ISettingsChan
             @Override
             public void onClick(View view)
             {
-                Toast.makeText(getApplicationContext(), "Временно недоступно", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), R.string.unavailable, Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -138,7 +139,11 @@ public class MainMenuActivity extends AppCompatActivity implements ISettingsChan
         loadAuthor();
         checkAuthor();
 
-        textview_author_name.setText(author);
+
+        if (!isNameless)
+        {
+            textview_author_name.setText(" " + author);
+        }
     }
 
     @Override
@@ -147,8 +152,7 @@ public class MainMenuActivity extends AppCompatActivity implements ISettingsChan
 
     }
 
-    private void loadAuthor()
-    {
+    private void loadAuthor() {
         sharedPref = getPreferences(MODE_PRIVATE);
         author = sharedPref.getString(PreferenceString.AUTHOR_NAME, author);
     }
@@ -163,6 +167,15 @@ public class MainMenuActivity extends AppCompatActivity implements ISettingsChan
 
     private void checkAuthor()
     {
+        if (author == null | author == "null")
+        {
+            isNameless = true;
+        }
+        else
+        {
+            isNameless = false;
+        }
+
         if (isNameless)
         {
             button_newVerse.setEnabled(false);
@@ -187,7 +200,7 @@ public class MainMenuActivity extends AppCompatActivity implements ISettingsChan
         final View dialogView = inflater.inflate(R.layout.entry_dialog, null);
         builder.setView(dialogView);
 
-        LinearLayout layout = (LinearLayout) dialogView.findViewById(R.id.layout_entry);
+        ScrollView layout = (ScrollView) dialogView.findViewById(R.id.layout_entry);
 
         layout.getBackground().setColorFilter(AppSettings.getSettings(getApplicationContext()).getBackground2Color(),
                 PorterDuff.Mode.SRC_IN);
@@ -238,7 +251,7 @@ public class MainMenuActivity extends AppCompatActivity implements ISettingsChan
                     edittext_authorSurname.getText().toString().replaceAll(" ", "").isEmpty())
                 {
                     isNameless = true;
-                    Toast.makeText(getApplicationContext(), "Не все поля заполнены", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), R.string.not_filled, Toast.LENGTH_SHORT).show();
                     return;
                 }
                 else
@@ -246,11 +259,11 @@ public class MainMenuActivity extends AppCompatActivity implements ISettingsChan
                     author = edittext_authorName.getText().toString().replaceAll(" ", "") + " "
                             + edittext_authorSurname.getText().toString().replaceAll(" ", "");
                     isNameless = false;
-                    Toast.makeText(getApplicationContext(), "Автор изменён", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), R.string.author_is_changed, Toast.LENGTH_SHORT).show();
                 }
 
                 saveAuthor();
-                textview_author_name.setText(author);
+                textview_author_name.setText(" " + author);
                 dialog.dismiss();
                 checkAuthor();
             }

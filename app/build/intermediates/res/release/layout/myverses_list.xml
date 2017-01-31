@@ -4,5 +4,6 @@
           android:layout_width="match_parent"
           android:layout_height="match_parent"
           android:background="@color/bright_green"
-          android:dividerHeight="2dp">
-</ListView><!-- From: file:/D:/dev/Android/MyApplication/app/src/main/res/layout/myverses_list.xml -->
+          android:divider="@color/transparent_color"
+          android:dividerHeight="1dp">
+</ListView><!-- From: file:/D:/dev/Android/PoetNotebook/app/src/main/res/layout/myverses_list.xml -->
