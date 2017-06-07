@@ -2,46 +2,184 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Eyecore\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.0\support-annotations-23.0.0.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="990e7f98a7bad86a40b1f0bcfeb039023afd0839">
-        <dex dex="D:\dev\Android\PoetNotebook\app\build\intermediates\pre-dexed\release\support-annotations-23.0.0-04438385022cf9783f86410ac5d299cdbdb70685.jar" />
+        is-multidex="true"
+        jar="D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0d191c1a09e4892d059e5ce749e4ad4e08129e35">
+        <dex dex="D:\dev\Android\PoetNotebook\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-25.1.1_eb34cab9f0af00cbdc289f0303fe350126313587\classes.dex" />
     </item>
     <item
-        jar="D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.github.yukuku\ambilwarna\2.0.1\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
+        is-multidex="true"
+        jar="D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="D:\dev\Android\PoetNotebook\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-25.1.1_a78f66939033c1bbb1538e704ef4fbcae2a9a31c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\dev\Android\PoetNotebook\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="334d6fa96eb240c3dfa2a73aaa6b5a398e3c631e">
+        <dex dex="D:\dev\Android\PoetNotebook\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_f6775d9c1b9d582dd818868307347890205ae545\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0fb891e8f0cfba0513043a7bb357513d229ca2cd">
+        <dex dex="D:\dev\Android\PoetNotebook\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-25.1.1_bf5167dbc83ca82b136ba95b75cc8f45cddc3be3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\dev\Android\PoetNotebook\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f09a8a3929b718d755f882e0f24106cb701e1985">
+        <dex dex="D:\dev\Android\PoetNotebook\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_c0fee4ee9bd808a570d0abf44e1cc84f24c2ab2c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ecb496cc08dd52551fc5ec6db3bc0632e95a89bb">
+        <dex dex="D:\dev\Android\PoetNotebook\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-25.1.1_0c11d74ca74218841b583829aaa91e907722c996\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\resources\AndroidSDK\extras\android\m2repository\com\android\support\support-annotations\25.1.1\support-annotations-25.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b59b6ee8d6ecc03e672d253800430343493a6ed8">
+        <dex dex="D:\dev\Android\PoetNotebook\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.1.1_1b38c0ac5b8ad39e45ff6bafa2ba1eca9ba81803\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Eyecore\.gradle\caches\modules-2\files-2.1\org.jbundle.util.osgi.wrapped\org.jbundle.util.osgi.wrapped.org.apache.http.client\4.1.2\98c86e42679fe7ac066f6c242e0d14f0bce0bb7c\org.jbundle.util.osgi.wrapped.org.apache.http.client-4.1.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="98c86e42679fe7ac066f6c242e0d14f0bce0bb7c">
+        <dex dex="D:\dev\Android\PoetNotebook\app\build\intermediates\transforms\dex\debug\folders\1000\10\org.jbundle.util.osgi.wrapped.org.apache.http.client-4.1.2_c900338cbb7ba86fc6dc31575b1ea55da7decece\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c03bf57f358aa10d253f21989e93bcf6014b3b17">
+        <dex dex="D:\dev\Android\PoetNotebook\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-25.1.1_e97a0490cf1579b218cea9261056cb33ca9de235\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\gridlayout-v7\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9c1c44672010b6847f3744ec3702624d8d16c240">
+        <dex dex="D:\dev\Android\PoetNotebook\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-gridlayout-v7-25.1.1_0fa8ed270d3a04653e811db31ba27df24a053908\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3e04ac8ca644ea7baddf6fdcf72e15c79e9df94a">
+        <dex dex="D:\dev\Android\PoetNotebook\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-25.1.1_d6305c211064491f8a0126aec6561f57ee954ca3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7bde4c34162092e0a77e7f12dc85ed77c484cf5c">
+        <dex dex="D:\dev\Android\PoetNotebook\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-25.1.1_91d9225ea31d1edc945f9439af84a25c3c7c7719\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\percent\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6fdb8d786e466855b9dc0ea2e155ea2d42be159e">
+        <dex dex="D:\dev\Android\PoetNotebook\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-percent-25.1.1_024b9e66400db55d3123ac982c4f8c3e857b098a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.github.ozodrukh\CircularReveal\2.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0ea06f21732a3f11bac13796ada56f100d1dd650">
+        <dex dex="D:\dev\Android\PoetNotebook\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.github.ozodrukh-CircularReveal-2.0.1_26f4c1d99e6d92692dcdb6b958774d47190cfdb7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\multidex\1.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
+        <dex dex="D:\dev\Android\PoetNotebook\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-multidex-1.0.1_595fe8c941c0e6c2a9a1927dfd00ea94a6714e3c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="02741d05d4b697fba5e279e9881aaa1da0ca7c7f">
+        <dex dex="D:\dev\Android\PoetNotebook\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-25.1.1_740c7160c8d58758df5fa3b88af2d1f2a04ac773\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.github.yukuku\ambilwarna\2.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
         sha1="7ed87c7f833e46dacace668e63cb8c4b67cb3172">
-        <dex dex="D:\dev\Android\PoetNotebook\app\build\intermediates\pre-dexed\release\classes-bbf2a6967670266840d81b87ea0ce42fa69596e8.jar" />
+        <dex dex="D:\dev\Android\PoetNotebook\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.github.yukuku-ambilwarna-2.0.1_3f51dc52cf3199ea3317f4f23d33b56989d7c17a\classes.dex" />
     </item>
     <item
-        jar="D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="8413c27b45b7fe61dca4a98159f65e2cee215f5a">
-        <dex dex="D:\dev\Android\PoetNotebook\app\build\intermediates\pre-dexed\release\classes-def3d0d76e3c5ab73131215e3852bab5e6d2bac1.jar" />
+        is-multidex="true"
+        jar="D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e2719c102dca3a7a5b02ce07f769362da6ddb4ab">
+        <dex dex="D:\dev\Android\PoetNotebook\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-25.1.1_529f1c804be684991e592cbb49cb48dbc21d1b2c\classes.dex" />
     </item>
     <item
-        jar="D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.0\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="4fcf0b1879f8caf497c073e1432d398e9e2988c1">
-        <dex dex="D:\dev\Android\PoetNotebook\app\build\intermediates\pre-dexed\release\classes-8adfa878086a6ec7597a4f19bea6e216f84de3b2.jar" />
+        is-multidex="true"
+        jar="D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.github.yalantis\Side-Menu.Android\1.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2e9634168413b1752941c036e5e4b1c00439b90f">
+        <dex dex="D:\dev\Android\PoetNotebook\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.github.yalantis-Side-Menu.Android-1.0.1_1db5fb39deeeb763f97ff00144582396934e9ebf\classes.dex" />
     </item>
     <item
-        jar="D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\libs\internal_impl-23.0.0.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="8bd336eeae661e8311330284897ee07f8ebaa297">
-        <dex dex="D:\dev\Android\PoetNotebook\app\build\intermediates\pre-dexed\release\internal_impl-23.0.0-97d657bc2667d9aff1e2c7efc7eb3dc381e36641.jar" />
-    </item>
-    <item
+        is-multidex="true"
         jar="D:\dev\Android\PoetNotebook\app\libs\joda-time-2.9.5.jar"
-        jumboMode="false"
-        revision="23.0.0"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
         sha1="5f01da7306363fad2028b916f3eab926262de928">
-        <dex dex="D:\dev\Android\PoetNotebook\app\build\intermediates\pre-dexed\release\joda-time-2.9.5-4fe4c99dc5934ab2aa8bb6810dea93baba4d495a.jar" />
+        <dex dex="D:\dev\Android\PoetNotebook\app\build\intermediates\transforms\dex\debug\folders\1000\2\joda-time-2.9.5_4fe4c99dc5934ab2aa8bb6810dea93baba4d495a\classes.dex" />
     </item>
 
 </items>

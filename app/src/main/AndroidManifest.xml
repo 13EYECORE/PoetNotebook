@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="eyecore.com.poetnotebook" >
+    package="eyecore.com.poetnotebook">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/icon_app"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
-
+        android:theme="@style/AppTheme">
         <activity
-            android:name=".activity.MainMenuActivity"
-            android:label="@string/app_name" >
+            android:name=".activity.SplashScreenActivity"
+            android:theme="@style/SplashScreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -18,11 +20,12 @@
         </activity>
 
         <activity
-            android:name=".activity.EditVerseActivity">
+            android:name=".activity.MainActivity"
+            android:label="@string/my_verses">
         </activity>
 
         <activity
-            android:name=".activity.MyVersesActivity">
+            android:name=".activity.EditVerseActivity">
         </activity>
 
         <activity
@@ -30,8 +33,18 @@
         </activity>
 
         <activity
-            android:name=".activity.SettingsActivity">
+            android:name=".activity.RegistrationActivity"
+            android:screenOrientation="portrait">
         </activity>
+
+        <activity
+            android:name=".activity.LoginActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
 
     </application>
 

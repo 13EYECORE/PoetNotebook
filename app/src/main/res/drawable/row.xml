@@ -4,7 +4,7 @@
     <item android:state_pressed="true">
         <shape>
             <solid
-                android:color="@android:color/transparent">
+                android:color="@color/transparent_color">
             </solid>
         </shape>
     </item>
@@ -12,15 +12,7 @@
     <item>
         <shape>
             <solid
-                android:color="@color/spring_green">
-            </solid>
-        </shape>
-    </item>
-
-    <item android:state_enabled="false">
-        <shape>
-            <solid
-                android:color="@color/material_grey_600">
+                android:color="@color/primaryColorDark">
             </solid>
         </shape>
     </item>

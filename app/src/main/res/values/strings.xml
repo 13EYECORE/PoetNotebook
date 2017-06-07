@@ -2,9 +2,10 @@
     <!--Application-->
     <string name="app_name">Блокнот поэта</string>
     <!--Toast-->
+    <string name="verse_published_suc">Стих опубликован</string>
     <string name="unavailable">Временно недоступно</string>
-    <string name="not_filled">Не все поля заполнены</string>
-    <string name="author_is_changed">Автор изменён</string>
+    <string name="name_not_filled">Название не введено</string>
+    <string name="fields_not_filled">Не все поля заполнены</string>
     <string name="rough_draft">(Черновик)</string>
     <string name="verse_is_saved">Стих сохранён</string>
     <string name="empty_list">Список пуст</string>
@@ -13,45 +14,85 @@
     <string name="settings_reset">Настройки сброшены</string>
     <string name="settings_saved">Настройки сохранены</string>
     <string name="error">Произошла ошибка</string>
-    <!--Entry activity-->
-    <string name="textview_introduce_yourself">Представьтесь!</string>
+    <string name="successfully_added">Стих успешно добавлен</string>
+    <string name="author_login_err">Вы ввели неправильный E-mail или пароль</string>
+    <string name="author_login_email_err">Вы ввели неправильный E-mail</string>
+    <string name="author_login_suc">Вход выполнен</string>
+    <string name="author_info_suc">Данные автора получены</string>
+    <string name="author_info_err">Данные автора не получены</string>
+    <string name="author_reg_suc">Регистрация прошла успешно</string>
+    <string name="author_reg_err">Ошибка при регистрации</string>
+    <string name="author_reg_email_err">Введите другой E-mail</string>
+    <string name="author_reg_email_pass_err">Вы ввели неправильный E-mail или пароль</string>
+    <string name="author_reg_email_pass_err_2">Пароль должен иметь как минимум одну цифру,
+        одну букву [a-z] и одну букву [A-Z], длина пароля должна быть 8-16 символов </string>
+    <string name="internet_err">Проверьте подключение к интернету</string>
+    <!--Author registration activity-->
     <string name="textview_author_name">Имя</string>
     <string name="textview_author_surname">Фамилия</string>
-    <string name="button_continue">Продолжить</string>
-    <!--Main menu activity-->
-    <string name="button_new_verse">Новый стих</string>
-    <string name="button_my_verses">Мои стихи</string>
-    <string name="button_favourites">Избранные</string>
-    <string name="button_published">Опубликованные</string>
-    <string name="button_settings">Настройки</string>
-    <string name="button_exit">Выйти</string>
-    <string name="textview_author_edit">\t<u>Изменить</u></string>
-    <string name="author_dialog_hint">\tНеизвестен</string>
-    <string name="textview_author">\tАвтор:</string>
+    <string name="textview_author_email">E-mail</string>
+    <string name="textview_author_password">Пароль</string>
+    <string name="button_registration">Зарегистрироваться</string>
+    <!--Author info fragment-->
+    <string name="author_info_name">Автор:</string>
+    <string name="author_info_id">ID Автора:</string>
+    <!--Author login activity-->
+    <string name="button_enter">Войти</string>
+    <string name="textview_registration"><u>Регистрация</u></string>
+    <!--Navigation maim menu-->
+    <string name="new_verse">Новый стих</string>
+    <string name="my_verses">Мои стихи</string>
+    <string name="favourites">Избранные</string>
+    <string name="published">Опубликованные</string>
+    <string name="settings">Настройки</string>
+    <string name="author">Автор</string>
+    <string name="exit">Выход</string>
+    <string name="navigation_drawer_open">Открыть меню</string>
+    <string name="navigation_drawer_close">Закрыть меню</string>
     <!--Edit verse activity-->
-    <string name="textview_verse_name">Название</string>
-    <string name="textview_verse_text">Текст</string>
-    <string name="edittext_enter_name">Введите название</string>
+    <string name="verse_name">Название</string>
+    <string name="save">Сохранить</string>
+    <string name="verse_name_text_view">Название стиха</string>
+    <string name="verse_name_hint">Введите название</string>
+    <string name="verse_editing">Редактирование</string>
     <string name="edittext_enter_text">Введите текст</string>
-    <string name="button_save">Сохранить</string>
     <!--Verse view activity-->
-    <string name="textview_verse_view_name" translatable="false">Название</string>
-    <string name="textview_verse_view_text" translatable="false">Текст</string>
-    <string name="textview_verse_view_author" translatable="false">Автор</string>
-    <string name="textview_verse_view_date" translatable="false">Дата</string>
-    <!--Settings activity-->
-    <string name="button_save_settings">Сохранить</string>
-    <string name="button_default_Settings">Стандартные</string>
-    <string name="textview_text_size">Размер текста</string>
-    <string name="textview_text_color">Цвет текста</string>
-    <string name="textview_background1_color">Цвет фона 1</string>
-    <string name="textview_background2_color">Цвет фона 2</string>
-    <!--Dialog of actions with my verse-->
-    <string-array name="actions_array">
+    <string name="textview_verse_view_name">Название</string>
+    <string name="textview_verse_view_text">Текст</string>
+    <string name="textview_verse_view_author">Автор</string>
+    <string name="textview_verse_view_date">Дата</string>
+    <!--Actions dialog with my verse-->
+    <string-array name="actions_array_mv">
         <item>Открыть</item>
+        <item>Опубликовать</item>
         <item>Редактировать</item>
         <item>Скопировать текст</item>
         <item>Удалить</item>
     </string-array>
-
+    <!--Actions dialog with favourite verse-->
+    <string-array name="actions_array_fv">
+        <item>Открыть</item>
+        <item>Скопировать текст</item>
+        <item>Удалить</item>
+    </string-array>
+    <!--Actions dialog with published verse-->
+    <string-array name="actions_array_3">
+        <item>Открыть</item>
+        <item>Добавить в избранное</item>
+        <item>Скопировать текст</item>
+    </string-array>
+    <!--Settings: Font size-->
+    <string-array name="font_size_array">
+        <item>Мелкий</item>
+        <item>Обычный</item>
+        <item>Крупный</item>
+        <item>Очень крупный</item>
+    </string-array>
+    <!--Settings: Font size values-->
+    <string-array name="font_size_values_array">
+        <item>Мелкий</item>
+        <item>Обычный</item>
+        <item>Крупный</item>
+        <item>Очень крупный</item>
+    </string-array>
 </resources>

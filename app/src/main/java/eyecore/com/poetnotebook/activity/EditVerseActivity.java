@@ -1,180 +1,295 @@
 package eyecore.com.poetnotebook.activity;
 
 
+import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.PorterDuff;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.joda.time.LocalDate;
+
+import eyecore.com.poetnotebook.settings.MyFont;
+import eyecore.com.poetnotebook.main.Author;
+import eyecore.com.poetnotebook.main.VerseType;
 import eyecore.com.poetnotebook.string.IntentString;
-import eyecore.com.poetnotebook.app.AppSettings;
 import eyecore.com.poetnotebook.database.MyVersesDataBaseHelper;
 import eyecore.com.poetnotebook.R;
-import eyecore.com.poetnotebook.Verse;
+import eyecore.com.poetnotebook.main.Verse;
+import eyecore.com.poetnotebook.string.PreferenceString;
 
 
-public class EditVerseActivity extends AppCompatActivity implements ISettingsChangeable
+public class EditVerseActivity extends AppCompatActivity
 {
     boolean isNewVerse;
     int verseID;
-    String verseAuthor;
+
     String verseName;
+    String authorID;
+    String authorName;
+
     Verse verse;
 
-    RelativeLayout layout;
+    EditText edittext_enter_text;
 
-    Button button_save;
+    EditText edittext_enter_name;
+    TextView textview_name;
 
-    EditText edittext_enterName;
-    EditText edittext_enterText;
+    View addVerseNameDialogView;
 
-    TextView textview_verseName;
-    TextView textview_verseText;
+    Toolbar toolbar;
 
     MyVersesDataBaseHelper dbHelper;
+
+    SharedPreferences sharedPref;
+
+    Typeface typeface;
+
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
 
-
-        setContentView(R.layout.edit_verse);
+        setContentView(R.layout.edit_verse_activity);
+        this.setTitle(getString(R.string.new_verse));
 
         Intent intent = getIntent();
 
+        typeface = MyFont.setDefaultFont(getApplicationContext());
+
+        sharedPref = getSharedPreferences(PreferenceString.AUTHOR_PREFERENCES, MODE_PRIVATE);
+
+        authorID = Author.loadAuthorID(sharedPref);
+        authorName = Author.loadAuthorName(sharedPref);
+
         isNewVerse = intent.getBooleanExtra(IntentString.IS_NEW_VERSE, false);
+
         verseID = intent.getIntExtra(IntentString.VERSE_ID, -1);
-        verseAuthor = intent.getStringExtra(IntentString.VERSE_AUTHOR);
 
-        dbHelper = new MyVersesDataBaseHelper(this);
+        dbHelper = new MyVersesDataBaseHelper(getApplicationContext(), authorID);
 
-        Typeface typeface = AppSettings.getSettings(getApplicationContext()).setDefaultFont();
+        edittext_enter_text = (EditText) findViewById(R.id.edittext_enter_text);
+        edittext_enter_text.setTypeface(typeface);
 
-        layout = (RelativeLayout)findViewById(R.id.layout_editverse);
+        LayoutInflater layoutInflater = LayoutInflater.from(this);
+        addVerseNameDialogView = layoutInflater.inflate(R.layout.input_dialog, null);
 
-        edittext_enterName = (EditText) findViewById(R.id.edittext_enter_verse_name);
-        edittext_enterName.setTypeface(typeface);
+        edittext_enter_name = (EditText) addVerseNameDialogView.findViewById(R.id.edittext_enter_name);
+        edittext_enter_name.setTypeface(typeface);
 
-        edittext_enterText = (EditText) findViewById(R.id.edittext_enter_text);
-        edittext_enterText.setTypeface(typeface);
+        textview_name = (TextView) addVerseNameDialogView.findViewById(R.id.dialogTitle);
+        textview_name.setTypeface(typeface);
 
-        textview_verseName = (TextView) findViewById(R.id.textview_verse_name);
-        textview_verseName.setTypeface(typeface, Typeface.BOLD);
+        toolbar = (Toolbar) findViewById(R.id.edit_verse_toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        textview_verseText = (TextView) findViewById(R.id.textview_verse_text);
-        textview_verseText.setTypeface(typeface, Typeface.BOLD);
-
-        button_save = (Button) findViewById(R.id.button_save);
-        button_save.setTypeface(typeface);
-
+        MyFont.applyFontForToolbarTitle(EditVerseActivity.this, toolbar, typeface);
 
         if (!isNewVerse)
         {
+            this.setTitle(getString(R.string.verse_editing));
+
             if (verseID != -1)
             {
-                verse = dbHelper.getVerse(verseID);
-                edittext_enterName.setText(verse.getVerseName());
-                edittext_enterText.setText(verse.getVerseText());
+                verse = dbHelper.getVerse(verseID, VerseType.MY_VERSE);
+                edittext_enter_text.setText(verse.getVerseText());
+                edittext_enter_name.setText(verse.getVerseName());
             }
         }
-
-        button_save.setOnClickListener(new View.OnClickListener()
+        else
         {
-            @Override
-            public void onClick(View view)
-            {
-                if (isNewVerse)
-                {
-                    if (edittext_enterName.getText().toString().isEmpty())
-                    {
-                        verseName = getString(R.string.rough_draft);
-                    }
-                    else
-                    {
-                        verseName = edittext_enterName.getText().toString();
-                    }
-
-                    verse = new Verse(verseName, verseAuthor,
-                            edittext_enterText.getText().toString());
-                    dbHelper.AddVerse(verse);
-                    Intent intent = new Intent(EditVerseActivity.this, MyVersesActivity.class);
-                    startActivity(intent);
-                }
-                else
-                {
-                    verse.setVerseName(edittext_enterName.getText().toString());
-                    verse.setVerseText(edittext_enterText.getText().toString());
-                    dbHelper.updateVerse(verse);
-                    dbHelper.close();
-                    Intent intent = new Intent(EditVerseActivity.this, MyVersesActivity.class);
-                    startActivity(intent);
-                }
-
-                Toast.makeText(getApplicationContext(), R.string.verse_is_saved, Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        AppSettings.getSettings(getApplicationContext()).loadSettings();
-        setSettings();
+            this.setTitle(getString(R.string.new_verse));
+        }
     }
 
     @Override
     public void onBackPressed()
     {
-        if (isNewVerse)
-        {
-            verse = new Verse(edittext_enterName.getText().toString() + getString(R.string.rough_draft), verseAuthor,
-                    edittext_enterText.getText().toString());
-            dbHelper.AddVerse(verse);
-            super.onBackPressed();
-        }
-        else
-        {
-            verse.setVerseName(edittext_enterName.getText().toString());
-            verse.setVerseText(edittext_enterText.getText().toString());
-            dbHelper.updateVerse(verse);
-            dbHelper.close();
-            Intent intent = new Intent(EditVerseActivity.this, MyVersesActivity.class);
-            startActivity(intent);
-        }
+        Intent intent = new Intent(EditVerseActivity.this, MainActivity.class);
+        startActivity(intent);
+        EditVerseActivity.this.finish();
     }
 
     @Override
-    public void setSettings()
+    public boolean onOptionsItemSelected(MenuItem item)
     {
-        layout.setBackgroundColor(AppSettings.getSettings(getApplicationContext()).getBackground1Color());
+        int item_id = item.getItemId();
 
-        button_save.getBackground().setColorFilter(AppSettings.getSettings(getApplicationContext()).getBackground2Color(),
-                PorterDuff.Mode.SRC_IN);
-        button_save.setTextColor(AppSettings.getSettings(getApplicationContext()).getTextColor());
-        button_save.setTextSize(AppSettings.getSettings(getApplicationContext()).getTextSize());
+        switch (item_id)
+        {
+            case R.id.action_save_verse:
 
-        textview_verseName.setTextColor(AppSettings.getSettings(getApplicationContext()).getTextColor());
-        textview_verseName.setTextSize(AppSettings.getSettings(getApplicationContext()).getTextSize());
+                showAddVerseNameDialog();
+                return true;
 
-        edittext_enterName.setTextColor(AppSettings.getSettings(getApplicationContext()).getTextColor());
-        edittext_enterName.setTextSize(AppSettings.getSettings(getApplicationContext()).getTextSize());
-        edittext_enterName.setHintTextColor(AppSettings.getSettings(getApplicationContext()).getTextColor());
-        edittext_enterName.getBackground().setColorFilter(AppSettings.getSettings(getApplicationContext()).getBackground1Color(),
-                PorterDuff.Mode.SRC_IN);
+            case android.R.id.home:
+                Intent intent = new Intent(EditVerseActivity.this, MainActivity.class);
+                startActivity(intent);
+                EditVerseActivity.this.finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+        getMenuInflater().inflate(R.menu.main_edit_verse, menu);
+        return true;
+    }
 
-        textview_verseText.setTextColor(AppSettings.getSettings(getApplicationContext()).getTextColor());
-        textview_verseText.setTextSize(AppSettings.getSettings(getApplicationContext()).getTextSize());
+    private void showSaveDialog()
+    {
+        AlertDialog.Builder builder = new AlertDialog.Builder(EditVerseActivity.this, R.style.DialogTheme);
+        builder.setTitle("Сохранить стих?");
 
-        edittext_enterText.setTextColor(AppSettings.getSettings(getApplicationContext()).getTextColor());
-        edittext_enterText.setTextSize(AppSettings.getSettings(getApplicationContext()).getTextSize());
-        edittext_enterText.setHintTextColor(AppSettings.getSettings(getApplicationContext()).getTextColor());
-        edittext_enterText.getBackground().setColorFilter(AppSettings.getSettings(getApplicationContext()).getBackground1Color(),
-                PorterDuff.Mode.SRC_IN);
+        String positiveText = "Да";
+        String negativeText = "Нет";
+
+        builder.setPositiveButton(positiveText, new DialogInterface.OnClickListener()
+        {
+            @Override
+            public void onClick(DialogInterface dialog, int which)
+            {
+                saveVerse();
+            }
+        });
+
+        builder.setNegativeButton(negativeText, new DialogInterface.OnClickListener()
+        {
+            @Override
+            public void onClick(DialogInterface dialog, int which)
+            {
+                dialog.cancel();
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
+
+        TextView title = (TextView)dialog.findViewById(R.id.alertTitle);
+        Button positive = (Button)dialog.findViewById(android.R.id.button1);
+        positive.setTypeface(typeface);
+        Button negative = (Button)dialog.findViewById(android.R.id.button2);
+        negative.setTypeface(typeface);
+        title.setTypeface(typeface);
+    }
+
+    private void showAddVerseNameDialog()
+    {
+        final AlertDialog.Builder builder = new AlertDialog.Builder(EditVerseActivity.this, R.style.DialogTheme);
+        builder.setView(addVerseNameDialogView);
+
+        String positiveText = "Сохранить";
+        String negativeText = "Отмена";
+
+        builder.setPositiveButton(positiveText, new DialogInterface.OnClickListener()
+        {
+            @Override
+            public void onClick(DialogInterface dialog, int which)
+            {
+                if (isNewVerse)
+                {
+                    verseName = edittext_enter_name.getText().toString();
+
+                    if (verseName.isEmpty())
+                    {
+                        Toast.makeText(getApplicationContext(), getString(R.string.name_not_filled), Toast.LENGTH_SHORT).show();
+                        dialog.dismiss();
+                    }
+                    else
+                    {
+                        dialog.dismiss();
+                        showSaveDialog();
+                    }
+                }
+                else
+                {
+                    if (edittext_enter_name.getText().toString().isEmpty())
+                    {
+                        Toast.makeText(getApplicationContext(), getString(R.string.name_not_filled), Toast.LENGTH_SHORT).show();
+                        dialog.dismiss();
+                    }
+                    else
+                    {
+                        verse.setVerseName(edittext_enter_name.getText().toString());
+                        dialog.dismiss();
+                        showSaveDialog();
+                    }
+                }
+            }
+        });
+
+        builder.setNegativeButton(negativeText, new DialogInterface.OnClickListener()
+        {
+            @Override
+            public void onClick(DialogInterface dialog, int which)
+            {
+                dialog.cancel();
+                dialog.dismiss();
+            }
+        });
+
+        builder.setOnDismissListener(new DialogInterface.OnDismissListener()
+        {
+            @Override
+            public void onDismiss(DialogInterface dialog)
+            {
+                ViewGroup viewGroup = (ViewGroup)addVerseNameDialogView.getParent();
+                viewGroup.removeView(addVerseNameDialogView);
+            }
+        });
+
+        AlertDialog alertDialog = builder.create();
+        alertDialog.setCanceledOnTouchOutside(true);
+        alertDialog.show();
+        Button positive = (Button)alertDialog.findViewById(android.R.id.button1);
+        positive.setTypeface(typeface);
+        Button negative = (Button)alertDialog.findViewById(android.R.id.button2);
+        negative.setTypeface(typeface);
+    }
+
+    private void saveVerse()
+    {
+        if (isNewVerse)
+        {
+            verse = new Verse(verseName, edittext_enter_text.getText().toString());
+            verse.setVerseAuthor(authorName);
+            verse.setAuthorID(authorID);
+            dbHelper.addVerse(verse, VerseType.MY_VERSE);
+            Toast.makeText(getApplicationContext(), getString(R.string.verse_is_saved), Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(EditVerseActivity.this, MainActivity.class);
+            startActivity(intent);
+            EditVerseActivity.this.finish();
+        }
+        else
+        {
+            verse.setVerseName(edittext_enter_name.getText().toString());
+            verse.setVerseText(edittext_enter_text.getText().toString());
+            verse.setVerseDate(LocalDate.now());
+            dbHelper.updateVerse(verse);
+            dbHelper.close();
+            Toast.makeText(getApplicationContext(), getString(R.string.verse_is_saved), Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(EditVerseActivity.this, MainActivity.class);
+            startActivity(intent);
+            EditVerseActivity.this.finish();
+        }
     }
 }
 

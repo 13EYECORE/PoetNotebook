@@ -2,9 +2,9 @@
   <dictionary name="Eyecore">
     <words>
       <w>edittext</w>
-      <w>imagebutton</w>
-      <w>listview</w>
-      <w>mainmenu</w>
+      <w>eyecore</w>
+      <w>poetnotebook</w>
+      <w>spashscreen</w>
       <w>textview</w>
     </words>
   </dictionary>

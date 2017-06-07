@@ -1,6 +1,7 @@
 package eyecore.com.poetnotebook.activity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -13,22 +14,29 @@ import org.joda.time.LocalDate;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 
-import eyecore.com.poetnotebook.string.IntentString;
 import eyecore.com.poetnotebook.R;
-import eyecore.com.poetnotebook.Verse;
-import eyecore.com.poetnotebook.app.AppSettings;
+import eyecore.com.poetnotebook.settings.MyFont;
+import eyecore.com.poetnotebook.main.Author;
+import eyecore.com.poetnotebook.main.Verse;
+import eyecore.com.poetnotebook.main.VerseType;
 import eyecore.com.poetnotebook.database.MyVersesDataBaseHelper;
+import eyecore.com.poetnotebook.string.IntentString;
+import eyecore.com.poetnotebook.string.PreferenceString;
 
-public class VerseViewActivity extends AppCompatActivity implements ISettingsChangeable
+public class VerseViewActivity extends AppCompatActivity
 {
+    ScrollView layout;
+
     TextView textview_verseName;
     TextView textview_verseText;
     TextView textview_verseAuthor;
     TextView textview_verseDate;
-    Verse verse;
-    ScrollView layout;
 
     MyVersesDataBaseHelper dbHelper;
+
+    SharedPreferences sharedPref;
+
+    Typeface typeface;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState)
@@ -36,61 +44,92 @@ public class VerseViewActivity extends AppCompatActivity implements ISettingsCha
         super.onCreate(savedInstanceState);
         setContentView(R.layout.verse_view);
 
-        AppSettings.getSettings(getApplicationContext()).loadSettings();
+        sharedPref = getSharedPreferences(PreferenceString.AUTHOR_PREFERENCES, MODE_PRIVATE);
+
+        dbHelper = new MyVersesDataBaseHelper(getApplicationContext(), Author.loadAuthorID(sharedPref));
+
+        typeface = MyFont.setDefaultFont(getApplicationContext());
+
+        layout = (ScrollView) findViewById(R.id.layout_verseview);
+        textview_verseName = (TextView) findViewById(R.id.verse_name_verse_view);
+        textview_verseName.setTypeface(typeface);
+        textview_verseText = (TextView) findViewById(R.id.verse_text_verse_view);
+        textview_verseText.setTypeface(typeface);
+        textview_verseAuthor = (TextView) findViewById(R.id.verse_author_verse_view);
+        textview_verseAuthor.setTypeface(typeface);
+        textview_verseDate = (TextView) findViewById(R.id.verse_date_verse_view);
+        textview_verseDate.setTypeface(typeface);
+
+        Intent intent = getIntent();
+        int verseType = intent.getIntExtra(IntentString.VERSE_TYPE, VerseType.NONE);
 
         DateTimeFormatter dtf = DateTimeFormat.forPattern("yyyy-MM-dd");
         DateTimeFormatter dtfOut = DateTimeFormat.forPattern("dd.MM.yyyy");
 
-        dbHelper = new MyVersesDataBaseHelper(this);
-
-        layout = (ScrollView) findViewById(R.id.layout_verseview);
-        textview_verseName = (TextView) findViewById(R.id.verse_name_verse_view);
-        textview_verseText = (TextView) findViewById(R.id.verse_text_verse_view);
-        textview_verseAuthor = (TextView) findViewById(R.id.verse_author_verse_view);
-        textview_verseDate = (TextView) findViewById(R.id.verse_date_verse_view);
-
-        Typeface typeface = AppSettings.getSettings(getApplicationContext()).setDefaultFont();
-
-        textview_verseName.setTypeface(typeface, Typeface.BOLD);
-        textview_verseText.setTypeface(typeface);
-        textview_verseAuthor.setTypeface(typeface, Typeface.BOLD);
-        textview_verseDate.setTypeface(typeface, Typeface.BOLD);
-
-        Intent intent = getIntent();
         int verseID = intent.getIntExtra(IntentString.VERSE_ID, -1);
 
-        if (verseID != -1)
+        switch (verseType)
         {
-            verse = dbHelper.getVerse(verseID);
-            textview_verseName.setText(verse.getVerseName());
-            textview_verseAuthor.setText(" "+verse.getVerseAuthor());
-            textview_verseText.setText(verse.getVerseText());
-            LocalDate date = dtf.parseLocalDate(verse.getVerseDate().toString());
-            textview_verseDate.setText(dtfOut.print(date)+" ");
+            case VerseType.MY_VERSE:
+
+                Verse verse;
+
+                if (verseID != -1)
+                {
+                    verse = dbHelper.getVerse(verseID, VerseType.MY_VERSE);
+                    textview_verseName.setText(verse.getVerseName());
+                    textview_verseAuthor.setText(" " + verse.getVerseAuthor());
+                    textview_verseText.setText(verse.getVerseText());
+                    LocalDate date = dtf.parseLocalDate(verse.getVerseDate().toString());
+                    textview_verseDate.setText(dtfOut.print(date) + " ");
+                }
+                else
+                {
+                    Toast.makeText(getApplicationContext(), R.string.error, Toast.LENGTH_SHORT).show();
+                }
+
+                break;
+
+            case VerseType.FAVOURITE_VERSE:
+
+
+                if (verseID != -1)
+                {
+                    verse = dbHelper.getVerse(verseID, VerseType.FAVOURITE_VERSE);
+                    textview_verseName.setText(verse.getVerseName());
+                    textview_verseAuthor.setText(" " + verse.getVerseAuthor());
+                    textview_verseText.setText(verse.getVerseText());
+                    LocalDate date = dtf.parseLocalDate(verse.getVerseDate().toString());
+                    textview_verseDate.setText(dtfOut.print(date) + " ");
+                }
+                else
+                {
+                    Toast.makeText(getApplicationContext(), R.string.error, Toast.LENGTH_SHORT).show();
+                }
+
+                break;
+
+            case VerseType.PUBLISHED_VERSE:
+
+                String verse_name = intent.getStringExtra(IntentString.PUB_VERSE_NAME);
+                String verse_text = intent.getStringExtra(IntentString.PUB_VERSE_TEXT);
+                String verse_author = intent.getStringExtra(IntentString.PUB_VERSE_AUTHOR);
+                String verse_date = intent.getStringExtra(IntentString.PUB_VERSE_DATE);
+                String verse_author_id = intent.getStringExtra(IntentString.PUB_VERSE_AUTHOR_ID);
+
+                if (verse_name != null & verse_text != null & verse_author != null &
+                        verse_date != null & verse_author_id != null)
+                {
+                    textview_verseName.setText(verse_name);
+                    textview_verseAuthor.setText(" " + verse_author);
+                    textview_verseText.setText(verse_text);
+                    textview_verseDate.setText(verse_date + " ");
+                }
+                else
+                {
+                    Toast.makeText(getApplicationContext(), R.string.error, Toast.LENGTH_SHORT).show();
+                }
+                break;
         }
-        else
-        {
-            Toast.makeText(getApplicationContext(), R.string.error, Toast.LENGTH_SHORT).show();
-        }
-
-        setSettings();
-    }
-
-    @Override
-    public void setSettings()
-    {
-        layout.setBackgroundColor(AppSettings.getSettings(getApplicationContext()).getBackground1Color());
-
-        textview_verseName.setTextColor(AppSettings.getSettings(getApplicationContext()).getTextColor());
-        textview_verseName.setTextSize(AppSettings.getSettings(getApplicationContext()).getTextSize());
-
-        textview_verseAuthor.setTextColor(AppSettings.getSettings(getApplicationContext()).getTextColor());
-        textview_verseAuthor.setTextSize(AppSettings.getSettings(getApplicationContext()).getTextSize());
-
-        textview_verseText.setTextColor(AppSettings.getSettings(getApplicationContext()).getTextColor());
-        textview_verseText.setTextSize(AppSettings.getSettings(getApplicationContext()).getTextSize());
-
-        textview_verseDate.setTextColor(AppSettings.getSettings(getApplicationContext()).getTextColor());
-        textview_verseDate.setTextSize(AppSettings.getSettings(getApplicationContext()).getTextSize());
     }
 }

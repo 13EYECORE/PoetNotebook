@@ -1,72 +1,170 @@
 -- Merging decision tree log ---
 manifest
-ADDED from AndroidManifest.xml:2:1
-	xmlns:android
-		ADDED from AndroidManifest.xml:2:11
+ADDED from D:\dev\Android\PoetNotebook\app\src\main\AndroidManifest.xml:2:1-51:12
 	package
-		ADDED from AndroidManifest.xml:3:5
-		INJECTED from AndroidManifest.xml:0:0
-		INJECTED from AndroidManifest.xml:0:0
+		ADDED from D:\dev\Android\PoetNotebook\app\src\main\AndroidManifest.xml:3:5-39
+		INJECTED from D:\dev\Android\PoetNotebook\app\src\main\AndroidManifest.xml
+		INJECTED from D:\dev\Android\PoetNotebook\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from AndroidManifest.xml:0:0
-		INJECTED from AndroidManifest.xml:0:0
+		INJECTED from D:\dev\Android\PoetNotebook\app\src\main\AndroidManifest.xml
+		INJECTED from D:\dev\Android\PoetNotebook\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\dev\Android\PoetNotebook\app\src\main\AndroidManifest.xml:2:11-69
 	android:versionCode
-		INJECTED from AndroidManifest.xml:0:0
-		INJECTED from AndroidManifest.xml:0:0
+		INJECTED from D:\dev\Android\PoetNotebook\app\src\main\AndroidManifest.xml
+		INJECTED from D:\dev\Android\PoetNotebook\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from D:\dev\Android\PoetNotebook\app\src\main\AndroidManifest.xml:5:5-67
+	android:name
+		ADDED from D:\dev\Android\PoetNotebook\app\src\main\AndroidManifest.xml:5:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from D:\dev\Android\PoetNotebook\app\src\main\AndroidManifest.xml:6:5-79
+	android:name
+		ADDED from D:\dev\Android\PoetNotebook\app\src\main\AndroidManifest.xml:6:22-76
 application
-ADDED from AndroidManifest.xml:5:5
-MERGED from com.android.support:support-v4:23.0.0:22:5
-MERGED from com.android.support:appcompat-v7:23.0.0:22:5
-MERGED from com.android.support:support-v4:23.0.0:22:5
+ADDED from D:\dev\Android\PoetNotebook\app\src\main\AndroidManifest.xml:8:5-49:19
+MERGED from [com.android.support:gridlayout-v7:25.3.1] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\gridlayout-v7\25.3.1\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:percent:25.3.1] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\percent\25.3.1\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:preference-v7:25.3.1] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\preference-v7\25.3.1\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:design:25.3.1] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\design\25.3.1\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.3.1\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.3.1\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.3.1\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:transition:25.3.1] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\transition\25.3.1\AndroidManifest.xml:26:5-20
+MERGED from [com.google.android.gms:play-services-appindexing:9.8.0] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\9.8.0\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-base:9.8.0] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.8.0\AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.firebase:firebase-common:9.8.0] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.8.0\AndroidManifest.xml:4:5-7:19
+MERGED from [com.google.android.gms:play-services-tasks:9.8.0] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.8.0\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-basement:9.8.0] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.8.0\AndroidManifest.xml:19:5-21:19
+MERGED from [com.android.support:support-v4:25.3.1] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.3.1\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.3.1\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.3.1\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.3.1\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.3.1\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.3.1\AndroidManifest.xml:29:5-20
 	android:label
-		ADDED from AndroidManifest.xml:8:9
+		ADDED from D:\dev\Android\PoetNotebook\app\src\main\AndroidManifest.xml:11:9-41
 	android:allowBackup
-		ADDED from AndroidManifest.xml:6:9
+		ADDED from D:\dev\Android\PoetNotebook\app\src\main\AndroidManifest.xml:9:9-35
 	android:icon
-		ADDED from AndroidManifest.xml:7:9
+		ADDED from D:\dev\Android\PoetNotebook\app\src\main\AndroidManifest.xml:10:9-40
 	android:theme
-		ADDED from AndroidManifest.xml:9:9
-activity#eyecore.com.poetnotebook.activity.MainMenuActivity
-ADDED from AndroidManifest.xml:11:9
-	android:label
-		ADDED from AndroidManifest.xml:13:13
+		ADDED from D:\dev\Android\PoetNotebook\app\src\main\AndroidManifest.xml:12:9-40
+activity#eyecore.com.poetnotebook.activity.SplashScreenActivity
+ADDED from D:\dev\Android\PoetNotebook\app\src\main\AndroidManifest.xml:13:9-20:20
+	android:theme
+		ADDED from D:\dev\Android\PoetNotebook\app\src\main\AndroidManifest.xml:15:13-53
 	android:name
-		ADDED from AndroidManifest.xml:12:13
+		ADDED from D:\dev\Android\PoetNotebook\app\src\main\AndroidManifest.xml:14:13-58
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from AndroidManifest.xml:14:13
+ADDED from D:\dev\Android\PoetNotebook\app\src\main\AndroidManifest.xml:16:13-19:29
 action#android.intent.action.MAIN
-ADDED from AndroidManifest.xml:15:17
+ADDED from D:\dev\Android\PoetNotebook\app\src\main\AndroidManifest.xml:17:17-69
 	android:name
-		ADDED from AndroidManifest.xml:15:25
+		ADDED from D:\dev\Android\PoetNotebook\app\src\main\AndroidManifest.xml:17:25-66
 category#android.intent.category.LAUNCHER
-ADDED from AndroidManifest.xml:16:17
+ADDED from D:\dev\Android\PoetNotebook\app\src\main\AndroidManifest.xml:18:17-77
 	android:name
-		ADDED from AndroidManifest.xml:16:27
+		ADDED from D:\dev\Android\PoetNotebook\app\src\main\AndroidManifest.xml:18:27-74
+activity#eyecore.com.poetnotebook.activity.MainActivity
+ADDED from D:\dev\Android\PoetNotebook\app\src\main\AndroidManifest.xml:22:9-25:20
+	android:label
+		ADDED from D:\dev\Android\PoetNotebook\app\src\main\AndroidManifest.xml:24:13-46
+	android:name
+		ADDED from D:\dev\Android\PoetNotebook\app\src\main\AndroidManifest.xml:23:13-50
 activity#eyecore.com.poetnotebook.activity.EditVerseActivity
-ADDED from AndroidManifest.xml:20:9
+ADDED from D:\dev\Android\PoetNotebook\app\src\main\AndroidManifest.xml:27:9-29:20
 	android:name
-		ADDED from AndroidManifest.xml:21:13
-activity#eyecore.com.poetnotebook.activity.MyVersesActivity
-ADDED from AndroidManifest.xml:24:9
-	android:name
-		ADDED from AndroidManifest.xml:25:13
+		ADDED from D:\dev\Android\PoetNotebook\app\src\main\AndroidManifest.xml:28:13-55
 activity#eyecore.com.poetnotebook.activity.VerseViewActivity
-ADDED from AndroidManifest.xml:28:9
+ADDED from D:\dev\Android\PoetNotebook\app\src\main\AndroidManifest.xml:31:9-33:20
 	android:name
-		ADDED from AndroidManifest.xml:29:13
-activity#eyecore.com.poetnotebook.activity.SettingsActivity
-ADDED from AndroidManifest.xml:32:9
+		ADDED from D:\dev\Android\PoetNotebook\app\src\main\AndroidManifest.xml:32:13-55
+activity#eyecore.com.poetnotebook.activity.RegistrationActivity
+ADDED from D:\dev\Android\PoetNotebook\app\src\main\AndroidManifest.xml:35:9-38:20
+	android:screenOrientation
+		ADDED from D:\dev\Android\PoetNotebook\app\src\main\AndroidManifest.xml:37:13-49
 	android:name
-		ADDED from AndroidManifest.xml:33:13
+		ADDED from D:\dev\Android\PoetNotebook\app\src\main\AndroidManifest.xml:36:13-58
+activity#eyecore.com.poetnotebook.activity.LoginActivity
+ADDED from D:\dev\Android\PoetNotebook\app\src\main\AndroidManifest.xml:40:9-43:20
+	android:screenOrientation
+		ADDED from D:\dev\Android\PoetNotebook\app\src\main\AndroidManifest.xml:42:13-49
+	android:name
+		ADDED from D:\dev\Android\PoetNotebook\app\src\main\AndroidManifest.xml:41:13-51
+meta-data#com.google.android.gms.version
+ADDED from D:\dev\Android\PoetNotebook\app\src\main\AndroidManifest.xml:45:9-47:69
+MERGED from [com.google.android.gms:play-services-basement:9.8.0] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.8.0\AndroidManifest.xml:20:9-121
+	android:value
+		ADDED from D:\dev\Android\PoetNotebook\app\src\main\AndroidManifest.xml:47:13-66
+	android:name
+		ADDED from D:\dev\Android\PoetNotebook\app\src\main\AndroidManifest.xml:46:13-58
 uses-sdk
-INJECTED from AndroidManifest.xml:0:0 reason: use-sdk injection requested
-MERGED from com.android.support:support-v4:23.0.0:20:5
-MERGED from com.android.support:appcompat-v7:23.0.0:20:5
-MERGED from com.android.support:support-v4:23.0.0:20:5
-MERGED from com.github.yukuku:ambilwarna:2.0.1:8:5
+INJECTED from D:\dev\Android\PoetNotebook\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:multidex:1.0.1] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\multidex\1.0.1\AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:gridlayout-v7:25.3.1] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\gridlayout-v7\25.3.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:percent:25.3.1] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\percent\25.3.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:preference-v7:25.3.1] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\preference-v7\25.3.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:design:25.3.1] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\design\25.3.1\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:25.3.1] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.3.1\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.3.1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.3.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:transition:25.3.1] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\transition\25.3.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-appindexing:9.8.0] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\9.8.0\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-base:9.8.0] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.8.0\AndroidManifest.xml:17:5-42
+MERGED from [com.google.firebase:firebase-common:9.8.0] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.8.0\AndroidManifest.xml:3:5-42
+MERGED from [com.google.android.gms:play-services-tasks:9.8.0] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.8.0\AndroidManifest.xml:3:5-42
+MERGED from [com.google.android.gms:play-services-basement:9.8.0] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.8.0\AndroidManifest.xml:17:5-42
+MERGED from [com.android.support:support-v4:25.3.1] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.3.1\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.3.1\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.3.1\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-utils:25.3.1] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.3.1\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:recyclerview-v7:25.3.1] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.3.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-core-ui:25.3.1] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.3.1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.3.1] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.3.1\AndroidManifest.xml:21:5-23:58
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:25.3.1] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\design\25.3.1\AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
-		INJECTED from AndroidManifest.xml:0:0
-		INJECTED from AndroidManifest.xml:0:0
+		INJECTED from D:\dev\Android\PoetNotebook\app\src\main\AndroidManifest.xml
+		INJECTED from D:\dev\Android\PoetNotebook\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from AndroidManifest.xml:0:0
-		INJECTED from AndroidManifest.xml:0:0
+		INJECTED from D:\dev\Android\PoetNotebook\app\src\main\AndroidManifest.xml
+		INJECTED from D:\dev\Android\PoetNotebook\app\src\main\AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:gridlayout-v7:25.3.1] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\gridlayout-v7\25.3.1\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:percent:25.3.1] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\percent\25.3.1\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:preference-v7:25.3.1] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\preference-v7\25.3.1\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:design:25.3.1] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\design\25.3.1\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.3.1\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.3.1\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.3.1\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:transition:25.3.1] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\transition\25.3.1\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-v4:25.3.1] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.3.1\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.3.1\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.3.1\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.3.1\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:recyclerview-v7:25.3.1] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.3.1\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-core-ui:25.3.1] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.3.1\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.3.1\AndroidManifest.xml:25:5-27:34
+	android:value
+		ADDED from [com.android.support:gridlayout-v7:25.3.1] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\gridlayout-v7\25.3.1\AndroidManifest.xml:24:9-31
+	android:name
+		ADDED from [com.android.support:gridlayout-v7:25.3.1] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.android.support\gridlayout-v7\25.3.1\AndroidManifest.xml:23:9-47
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:9.8.0] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.8.0\AndroidManifest.xml:19:9-172
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:9.8.0] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.8.0\AndroidManifest.xml:19:146-170
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:9.8.0] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.8.0\AndroidManifest.xml:19:86-145
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:9.8.0] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.8.0\AndroidManifest.xml:19:19-85
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:9.8.0] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.8.0\AndroidManifest.xml:6:9-175
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:9.8.0] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.8.0\AndroidManifest.xml:6:19-78
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:9.8.0] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.8.0\AndroidManifest.xml:6:125-149
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:9.8.0] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.8.0\AndroidManifest.xml:6:150-173
+	android:name
+		ADDED from [com.google.firebase:firebase-common:9.8.0] D:\dev\Android\PoetNotebook\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.8.0\AndroidManifest.xml:6:79-124
